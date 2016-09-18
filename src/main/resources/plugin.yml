@@ -1,0 +1,6 @@
+name: IA-For-PAF
+version: ${project.version}
+author: Simonsator
+depends: [PartyAndFriends]
+main: de.simonsator.partyandfriends.interactall.IAMain
+description: An add-on for party and friends to add /friend acceptall and /friend denyall

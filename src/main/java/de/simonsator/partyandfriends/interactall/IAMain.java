@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 /**
- * @author simonbrungs
+ * @author Simonsator
  * @version 1.0.0 18.09.16
  */
 public class IAMain extends Plugin {
