@@ -31,7 +31,12 @@ public class IAMain extends Plugin {
 				new AcceptAll(config.getCreatedConfiguration().getStringList("AcceptAll.Names").toArray(new String[0]),
 						config.getCreatedConfiguration().getInt("AcceptAll.Priority"),
 						config.getCreatedConfiguration().getString("Messages.AcceptAll.Help")));
+		Main.getInstance().getFriendsCommand().addCommand(
+				new DenyAll(config.getCreatedConfiguration().getStringList("DenyAll.Names").toArray(new String[0]),
+						config.getCreatedConfiguration().getInt("DenyAll.Priority"),
+						config.getCreatedConfiguration().getString("Messages.DenyAll.Help")));
 	}
+
 
 	public Configuration getConfig() {
 		return config.getCreatedConfiguration();
