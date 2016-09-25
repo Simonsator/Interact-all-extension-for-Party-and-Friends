@@ -30,4 +30,10 @@ public abstract class InteractAllCommand extends FriendSubCommand {
 	}
 
 	protected abstract void execute(OnlinePAFPlayer pPlayer, PAFPlayer pRequester);
+
+	@Override
+	public void onCommand(OnlinePAFPlayer pPlayer, String[] args) {
+		if (!hasFriendRequests(pPlayer))
+			return;
+	}
 }

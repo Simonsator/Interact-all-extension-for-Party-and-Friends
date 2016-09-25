@@ -8,7 +8,7 @@ import net.md_5.bungee.api.chat.TextComponent;
 import java.util.List;
 
 /**
- * @author simonbrungs
+ * @author Simonsator
  * @version 1.0.0 18.09.16
  */
 public class DenyAllSmallOutput extends InteractAllCommand {

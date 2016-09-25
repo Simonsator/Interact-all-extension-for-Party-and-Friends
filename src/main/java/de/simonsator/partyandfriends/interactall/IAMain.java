@@ -15,7 +15,7 @@ public class IAMain extends Plugin {
 	private IAConfigLoader config;
 	private static IAMain instance;
 
-	public static IAMain getInstance() {
+	static IAMain getInstance() {
 		return instance;
 	}
 
@@ -27,18 +27,30 @@ public class IAMain extends Plugin {
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Main.getInstance().getFriendsCommand().addCommand(
-				new AcceptAllSmallOutput(config.getCreatedConfiguration().getStringList("AcceptAll.Names").toArray(new String[0]),
-						config.getCreatedConfiguration().getInt("AcceptAll.Priority"),
-						config.getCreatedConfiguration().getString("Messages.AcceptAll.Help")));
-		Main.getInstance().getFriendsCommand().addCommand(
-				new DenyAllSmallOutput(config.getCreatedConfiguration().getStringList("DenyAll.Names").toArray(new String[0]),
-						config.getCreatedConfiguration().getInt("DenyAll.Priority"),
-						config.getCreatedConfiguration().getString("Messages.DenyAll.Help")));
+		if (getConfig().getBoolean("AcceptAll.LargeOutput.Use"))
+			Main.getInstance().getFriendsCommand().addCommand(
+					new AcceptAllLargeOutput(getConfig().getStringList("AcceptAll.Names").toArray(new String[0]),
+							getConfig().getInt("AcceptAll.Priority"),
+							getConfig().getString("Messages.AcceptAll.Help")));
+		else
+			Main.getInstance().getFriendsCommand().addCommand(
+					new AcceptAllSmallOutput(getConfig().getStringList("AcceptAll.Names").toArray(new String[0]),
+							getConfig().getInt("AcceptAll.Priority"),
+							getConfig().getString("Messages.AcceptAll.Help")));
+		if (getConfig().getBoolean("DenyAll.LargeOutput.Use"))
+			Main.getInstance().getFriendsCommand().addCommand(
+					new DenyAllLargeOutput(getConfig().getStringList("DenyAll.Names").toArray(new String[0]),
+							getConfig().getInt("DenyAll.Priority"),
+							getConfig().getString("Messages.DenyAll.Help")));
+		else
+			Main.getInstance().getFriendsCommand().addCommand(
+					new DenyAllSmallOutput(getConfig().getStringList("DenyAll.Names").toArray(new String[0]),
+							getConfig().getInt("DenyAll.Priority"),
+							getConfig().getString("Messages.DenyAll.Help")));
 	}
 
 
-	public Configuration getConfig() {
+	Configuration getConfig() {
 		return config.getCreatedConfiguration();
 	}
 }
