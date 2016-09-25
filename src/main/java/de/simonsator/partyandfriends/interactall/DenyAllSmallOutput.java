@@ -11,8 +11,8 @@ import java.util.List;
  * @author simonbrungs
  * @version 1.0.0 18.09.16
  */
-public class DenyAll extends InteractAllCommand {
-	protected DenyAll(String[] pCommands, int pPriority, String pHelp) {
+public class DenyAllSmallOutput extends InteractAllCommand {
+	protected DenyAllSmallOutput(String[] pCommands, int pPriority, String pHelp) {
 		super(pCommands, pPriority, pHelp);
 	}
 
