@@ -28,7 +28,7 @@ public class IAMain extends Plugin {
 			e.printStackTrace();
 		}
 		Main.getInstance().getFriendsCommand().addCommand(
-				new AcceptAll(config.getCreatedConfiguration().getStringList("AcceptAll.Names").toArray(new String[0]),
+				new AcceptAllSmallOutput(config.getCreatedConfiguration().getStringList("AcceptAll.Names").toArray(new String[0]),
 						config.getCreatedConfiguration().getInt("AcceptAll.Priority"),
 						config.getCreatedConfiguration().getString("Messages.AcceptAll.Help")));
 		Main.getInstance().getFriendsCommand().addCommand(

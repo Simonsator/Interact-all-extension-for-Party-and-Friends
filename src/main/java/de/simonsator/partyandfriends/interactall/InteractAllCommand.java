@@ -17,12 +17,17 @@ public abstract class InteractAllCommand extends FriendSubCommand {
 		super(pCommands, pPriority, pHelp);
 	}
 
-	protected boolean hasFriendRequests(OnlinePAFPlayer pPlayer, List<PAFPlayer> pRequests) {
-		if (pRequests.isEmpty()) {
+	protected boolean hasFriendRequests(OnlinePAFPlayer pPlayer) {
+		List<PAFPlayer> requests = pPlayer.getRequests();
+		if (requests.isEmpty()) {
 			pPlayer.sendMessage(new TextComponent(Main.getInstance().getFriendsPrefix() +
 					IAMain.getInstance().getConfig().getString("Messages.NoFriendRequests")));
 			return false;
 		}
+		for (PAFPlayer player : requests)
+			execute(pPlayer, player);
 		return true;
 	}
+
+	protected abstract void execute(OnlinePAFPlayer pPlayer, PAFPlayer pRequester);
 }

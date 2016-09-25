@@ -17,12 +17,14 @@ public class DenyAll extends InteractAllCommand {
 	}
 
 	@Override
+	protected void execute(OnlinePAFPlayer pPlayer, PAFPlayer pRequester) {
+		pPlayer.denyRequest(pRequester);
+	}
+
+	@Override
 	public void onCommand(OnlinePAFPlayer pPlayer, String[] args) {
-		List<PAFPlayer> requests = pPlayer.getRequests();
-		if (!hasFriendRequests(pPlayer, requests))
+		if (!hasFriendRequests(pPlayer))
 			return;
-		for (PAFPlayer player : requests)
-			pPlayer.denyRequest(player);
 		pPlayer.sendMessage(new TextComponent(Main.getInstance().getFriendsPrefix() +
 				IAMain.getInstance().getConfig().getString("Messages.DenyAll.DeniedAll")));
 	}

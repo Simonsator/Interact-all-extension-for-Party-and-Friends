@@ -11,20 +11,21 @@ import java.util.List;
  * @author Simonsator
  * @version 1.0.0 18.09.16
  */
-public class AcceptAll extends InteractAllCommand {
-	public AcceptAll(String[] pCommands, int pPriority, String pHelp) {
+public class AcceptAllSmallOutput extends InteractAllCommand {
+	public AcceptAllSmallOutput(String[] pCommands, int pPriority, String pHelp) {
 		super(pCommands, pPriority, pHelp);
 	}
 
 	@Override
+	protected void execute(OnlinePAFPlayer pPlayer, PAFPlayer pRequester) {
+		pPlayer.addFriend(pRequester);
+		pPlayer.denyRequest(pRequester);
+	}
+
+	@Override
 	public void onCommand(OnlinePAFPlayer pPlayer, String[] args) {
-		List<PAFPlayer> requests = pPlayer.getRequests();
-		if (!hasFriendRequests(pPlayer, requests))
+		if (!hasFriendRequests(pPlayer))
 			return;
-		for (PAFPlayer player : requests) {
-			pPlayer.addFriend(player);
-			pPlayer.denyRequest(player);
-		}
 		pPlayer.sendMessage(new TextComponent(Main.getInstance().getFriendsPrefix() +
 				IAMain.getInstance().getConfig().getString("Messages.AcceptAll.AcceptedAll")));
 	}
