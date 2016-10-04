@@ -15,7 +15,7 @@ public class IAConfigLoader extends ConfigurationCreator {
 		readFile();
 		loadDefaultValues();
 		saveFile();
-		process(getCreatedConfiguration());
+		process(configuration);
 	}
 
 	private void loadDefaultValues() {
