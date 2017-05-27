@@ -20,7 +20,7 @@ public abstract class InteractAllCommand extends FriendSubCommand {
 	protected boolean hasFriendRequests(OnlinePAFPlayer pPlayer) {
 		List<PAFPlayer> requests = pPlayer.getRequests();
 		if (requests.isEmpty()) {
-			pPlayer.sendMessage(new TextComponent(Main.getInstance().getFriendsPrefix() +
+			pPlayer.sendMessage(new TextComponent(PREFIX +
 					IAMain.getInstance().getConfig().getString("Messages.NoFriendRequests")));
 			return false;
 		}

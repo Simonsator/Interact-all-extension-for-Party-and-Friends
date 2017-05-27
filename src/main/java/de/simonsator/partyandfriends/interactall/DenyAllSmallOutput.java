@@ -2,10 +2,7 @@ package de.simonsator.partyandfriends.interactall;
 
 import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
-import de.simonsator.partyandfriends.main.Main;
 import net.md_5.bungee.api.chat.TextComponent;
-
-import java.util.List;
 
 /**
  * @author Simonsator
@@ -25,7 +22,7 @@ public class DenyAllSmallOutput extends InteractAllCommand {
 	public void onCommand(OnlinePAFPlayer pPlayer, String[] args) {
 		if (!hasFriendRequests(pPlayer))
 			return;
-		pPlayer.sendMessage(new TextComponent(Main.getInstance().getFriendsPrefix() +
+		pPlayer.sendMessage(new TextComponent(PREFIX +
 				IAMain.getInstance().getConfig().getString("Messages.DenyAll.DeniedAll")));
 	}
 }
