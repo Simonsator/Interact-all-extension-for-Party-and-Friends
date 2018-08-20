@@ -47,6 +47,7 @@ public class IAMain extends PAFExtension {
 					new DenyAllSmallOutput(getConfig().getStringList("DenyAll.Names").toArray(new String[0]),
 							getConfig().getInt("DenyAll.Priority"),
 							getConfig().getString("Messages.DenyAll.Help")));
+		registerAsExtension();
 	}
 
 
