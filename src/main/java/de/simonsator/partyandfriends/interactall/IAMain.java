@@ -12,8 +12,8 @@ import java.io.IOException;
  * @version 1.0.0 18.09.16
  */
 public class IAMain extends PAFExtension {
-	private IAConfigLoader config;
 	private static IAMain instance;
+	private IAConfigLoader config;
 
 	static IAMain getInstance() {
 		return instance;
