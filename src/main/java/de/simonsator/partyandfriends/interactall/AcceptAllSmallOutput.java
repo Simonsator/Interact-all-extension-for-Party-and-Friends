@@ -1,11 +1,12 @@
 package de.simonsator.partyandfriends.interactall;
 
+import de.simonsator.partyandfriends.api.events.command.FriendshipCommandEvent;
 import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
-import de.simonsator.partyandfriends.main.Main;
+import de.simonsator.partyandfriends.friends.commands.Friends;
+import de.simonsator.partyandfriends.friends.subcommands.Add;
+import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.TextComponent;
-
-import java.util.List;
 
 /**
  * @author Simonsator
@@ -18,6 +19,11 @@ public class AcceptAllSmallOutput extends InteractAllCommand {
 
 	@Override
 	protected void execute(OnlinePAFPlayer pPlayer, PAFPlayer pRequester) {
+		FriendshipCommandEvent event = new FriendshipCommandEvent(pPlayer, pRequester,
+				new String[]{getCommandName(), pRequester.getName()}, Friends.getInstance().getSubCommand(Add.class));
+		ProxyServer.getInstance().getPluginManager().callEvent(event);
+		if (event.isCancelled())
+			return;
 		pPlayer.addFriend(pRequester);
 		pPlayer.denyRequest(pRequester);
 	}
