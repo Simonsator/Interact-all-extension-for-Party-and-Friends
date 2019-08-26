@@ -2,7 +2,7 @@ package de.simonsator.partyandfriends.interactall;
 
 import de.simonsator.partyandfriends.api.PAFExtension;
 import de.simonsator.partyandfriends.friends.commands.Friends;
-import net.md_5.bungee.config.Configuration;
+import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
 
 import java.io.File;
 import java.io.IOException;
@@ -23,7 +23,7 @@ public class IAMain extends PAFExtension {
 	public void onEnable() {
 		instance = this;
 		try {
-			config = new IAConfigLoader(new File(getConfigFolder(), "config.yml"));
+			config = new IAConfigLoader(new File(getConfigFolder(), "config.yml"), this);
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -51,8 +51,8 @@ public class IAMain extends PAFExtension {
 	}
 
 
-	Configuration getConfig() {
-		return config.getCreatedConfiguration();
+	public ConfigurationCreator getConfig() {
+		return config;
 	}
 
 	@Override

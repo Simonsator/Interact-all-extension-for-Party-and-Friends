@@ -1,11 +1,11 @@
 package de.simonsator.partyandfriends.interactall;
 
+import de.simonsator.partyandfriends.api.adapter.BukkitBungeeAdapter;
 import de.simonsator.partyandfriends.api.events.command.FriendshipCommandEvent;
 import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
 import de.simonsator.partyandfriends.friends.commands.Friends;
 import de.simonsator.partyandfriends.friends.subcommands.Add;
-import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.TextComponent;
 
 /**
@@ -21,7 +21,7 @@ public class AcceptAllSmallOutput extends InteractAllCommand {
 	protected void execute(OnlinePAFPlayer pPlayer, PAFPlayer pRequester) {
 		FriendshipCommandEvent event = new FriendshipCommandEvent(pPlayer, pRequester,
 				new String[]{getCommandName(), pRequester.getName()}, Friends.getInstance().getSubCommand(Add.class));
-		ProxyServer.getInstance().getPluginManager().callEvent(event);
+		BukkitBungeeAdapter.getInstance().callEvent(event);
 		if (event.isCancelled())
 			return;
 		pPlayer.addFriend(pRequester);

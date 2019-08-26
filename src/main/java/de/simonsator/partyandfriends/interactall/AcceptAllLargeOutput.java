@@ -17,7 +17,7 @@ public class AcceptAllLargeOutput extends InteractAllCommand {
 	protected void execute(OnlinePAFPlayer pPlayer, PAFPlayer pRequester) {
 		Friends.getInstance().execute(pPlayer.getPlayer(),
 				new String[]{"friend",
-						IAMain.getInstance().getConfig().getString("AcceptAll.LargeOutput.AcceptCommandName", pRequester.getName())});
+						IAMain.getInstance().getConfig().getString("AcceptAll.LargeOutput.AcceptCommandName"), pRequester.getName()});
 	}
 
 }
