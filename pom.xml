@@ -6,7 +6,10 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>InteractAll</artifactId>
-	<version>1.0.3-SNAPSHOT</version>
+	<version>1.0.4-RELEASE</version>
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
 	<build>
 		<plugins>
 			<plugin>
@@ -34,28 +37,21 @@
 		</repository>
 		<repository>
 			<id>Bungee Repo</id>
-			<url>http://simonsator.de/repo/</url>
+			<url>https://simonsator.de/repo/</url>
 		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>BungeecordPartyAndFriends</artifactId>
-			<version>1.0.74</version>
+			<version>1.0.86</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>net.md-5</groupId>
 			<artifactId>bungeecord-api</artifactId>
-			<version>1.11-SNAPSHOT</version>
+			<version>1.16-R0.4</version>
 			<type>jar</type>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>net.md-5</groupId>
-			<artifactId>bungeecord-api</artifactId>
-			<version>1.11-SNAPSHOT</version>
-			<type>javadoc</type>
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
