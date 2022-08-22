@@ -1,9 +1,9 @@
-package de.simonsator.partyandfriends.interactall;
+package de.simonsator.partyandfriends.interactall.velocity;
 
-import de.simonsator.partyandfriends.api.friends.abstractcommands.FriendSubCommand;
-import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
-import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
-import net.md_5.bungee.api.chat.TextComponent;
+import de.simonsator.partyandfriends.velocity.api.friends.abstractcommands.FriendSubCommand;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayer;
+import net.kyori.adventure.text.Component;
 
 import java.util.List;
 
@@ -19,7 +19,7 @@ public abstract class InteractAllCommand extends FriendSubCommand {
 	protected boolean hasFriendRequests(OnlinePAFPlayer pPlayer) {
 		List<PAFPlayer> requests = pPlayer.getRequests();
 		if (requests.isEmpty()) {
-			pPlayer.sendMessage(new TextComponent(PREFIX +
+			pPlayer.sendMessage(Component.text(PREFIX +
 					IAMain.getInstance().getConfig().getString("Messages.NoFriendRequests")));
 			return false;
 		}

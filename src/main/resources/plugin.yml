@@ -3,6 +3,6 @@ version: ${project.version}
 author: Simonsator
 depends: [ PartyAndFriends ]
 depend: [ PartyAndFriends ]
-main: de.simonsator.partyandfriends.interactall.IAMain
+main: de.simonsator.partyandfriends.interactall.bungee.IAMain
 description: An add-on for party and friends to add /friend acceptall and /friend denyall
 api-version: 1.13
