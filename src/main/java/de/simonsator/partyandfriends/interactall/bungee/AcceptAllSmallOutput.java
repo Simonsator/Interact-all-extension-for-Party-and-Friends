@@ -8,10 +8,6 @@ import de.simonsator.partyandfriends.friends.commands.Friends;
 import de.simonsator.partyandfriends.friends.subcommands.Add;
 import net.md_5.bungee.api.chat.TextComponent;
 
-/**
- * @author Simonsator
- * @version 1.0.0 18.09.16
- */
 public class AcceptAllSmallOutput extends InteractAllCommand {
 	public AcceptAllSmallOutput(String[] pCommands, int pPriority, String pHelp) {
 		super(pCommands, pPriority, pHelp);

@@ -4,10 +4,6 @@ import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayer;
 import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.velocity.friends.commands.Friends;
 
-/**
- * @author Simonsator
- * @version 1.0.0 25.09.16
- */
 public class AcceptAllLargeOutput extends InteractAllCommand {
 	public AcceptAllLargeOutput(String[] pCommands, int pPriority, String pHelp) {
 		super(pCommands, pPriority, pHelp);

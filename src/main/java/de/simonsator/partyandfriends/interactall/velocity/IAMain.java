@@ -8,10 +8,6 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Path;
 
-/**
- * @author Simonsator
- * @version 1.0.0 18.09.16
- */
 public class IAMain extends PAFExtension {
 	private static IAMain instance;
 	private IAConfigLoader config;

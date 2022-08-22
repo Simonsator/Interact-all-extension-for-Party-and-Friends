@@ -7,10 +7,6 @@ import net.kyori.adventure.text.Component;
 
 import java.util.List;
 
-/**
- * @author Simonsator
- * @version 1.0.0 18.09.16
- */
 public abstract class InteractAllCommand extends FriendSubCommand {
 	public InteractAllCommand(String[] pCommands, int pPriority, String pHelp) {
 		super(pCommands, pPriority, pHelp);

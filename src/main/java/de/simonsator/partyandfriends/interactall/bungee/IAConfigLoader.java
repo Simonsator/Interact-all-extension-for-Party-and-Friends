@@ -6,10 +6,6 @@ import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
 import java.io.File;
 import java.io.IOException;
 
-/**
- * @author Simonsator
- * @version 1.0.0 18.09.16
- */
 public class IAConfigLoader extends ConfigurationCreator {
 	protected IAConfigLoader(File file, PAFExtension pPlugin) throws IOException {
 		super(file, pPlugin);
