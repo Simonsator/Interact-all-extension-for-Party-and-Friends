@@ -43,18 +43,22 @@
 			<id>papermc</id>
 			<url>https://repo.papermc.io/repository/maven-public/</url>
 		</repository>
+		<repository>
+			<id>Simonsators-repo</id>
+			<url>https://simonsator.de/repo</url>
+		</repository>
 	</repositories>
 	<dependencies>
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>BungeecordPartyAndFriends</artifactId>
-			<version>1.0.86</version>
+			<version>1.0.88</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>de.simonsator</groupId>
-			<artifactId>Party-and-Friends-For-Velocity</artifactId>
-			<version>1.0.233</version>
+			<artifactId>VelocityPoweredPartyAndFriends</artifactId>
+			<version>1.0.87</version>
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
