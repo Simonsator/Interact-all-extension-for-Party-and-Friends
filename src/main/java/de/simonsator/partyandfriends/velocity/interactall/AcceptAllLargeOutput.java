@@ -1,8 +1,8 @@
-package de.simonsator.partyandfriends.interactall.bungee;
+package de.simonsator.partyandfriends.velocity.interactall;
 
-import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
-import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
-import de.simonsator.partyandfriends.friends.commands.Friends;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayer;
+import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
+import de.simonsator.partyandfriends.velocity.friends.commands.Friends;
 
 public class AcceptAllLargeOutput extends InteractAllCommand {
 	public AcceptAllLargeOutput(String[] pCommands, int pPriority, String pHelp) {

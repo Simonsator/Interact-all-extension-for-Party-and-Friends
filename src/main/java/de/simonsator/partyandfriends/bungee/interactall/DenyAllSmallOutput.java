@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.interactall.bungee;
+package de.simonsator.partyandfriends.bungee.interactall;
 
 import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;

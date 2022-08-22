@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.interactall.velocity;
+package de.simonsator.partyandfriends.velocity.interactall;
 
 import de.simonsator.partyandfriends.velocity.api.adapter.BukkitBungeeAdapter;
 import de.simonsator.partyandfriends.velocity.api.events.command.FriendshipCommandEvent;

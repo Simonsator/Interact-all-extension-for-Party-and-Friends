@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.interactall.velocity;
+package de.simonsator.partyandfriends.velocity.interactall;
 
 import de.simonsator.partyandfriends.velocity.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.velocity.api.pafplayers.PAFPlayer;

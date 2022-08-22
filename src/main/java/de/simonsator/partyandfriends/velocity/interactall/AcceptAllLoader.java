@@ -1,4 +1,4 @@
-package de.simonsator.partyandfriends.interactall.velocity;
+package de.simonsator.partyandfriends.velocity.interactall;
 
 import com.google.inject.Inject;
 import com.velocitypowered.api.event.Subscribe;
