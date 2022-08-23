@@ -4,5 +4,5 @@ author: Simonsator
 depends: [ PartyAndFriends ]
 depend: [ PartyAndFriends ]
 main: de.simonsator.partyandfriends.interactall.IAMain
-description: An add-on for party and friends to add /friend acceptall and /friend denyall
+description: An add-on for Party and Friends which adds the commands /friend acceptall and /friend denyall
 api-version: 1.13
