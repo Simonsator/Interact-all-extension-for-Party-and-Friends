@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>de.simonsator</groupId>
-	<artifactId>InteractAll</artifactId>
+	<artifactId>InteractAll-Velocity</artifactId>
 	<version>1.0.5-RELEASE</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -23,6 +23,13 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>wagon-ssh</artifactId>
+				<version>3.5.1</version>
+			</extension>
+		</extensions>
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -54,4 +61,10 @@
 			<scope>provided</scope>
 		</dependency>
 	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>simonsators-web-server</id>
+			<url>sftp://ssh.strato.de/simonsator/repo</url>
+		</repository>
+	</distributionManagement>
 </project>
