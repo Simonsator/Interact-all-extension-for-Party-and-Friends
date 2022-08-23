@@ -1,19 +1,20 @@
-package de.simonsator.partyandfriends.interactall;
+package de.simonsator.partyandfriends.velocity.interactall;
 
-import de.simonsator.partyandfriends.api.PAFExtension;
-import de.simonsator.partyandfriends.friends.commands.Friends;
-import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
+import de.simonsator.partyandfriends.velocity.api.PAFExtension;
+import de.simonsator.partyandfriends.velocity.friends.commands.Friends;
+import de.simonsator.partyandfriends.velocity.utilities.ConfigurationCreator;
 
 import java.io.File;
 import java.io.IOException;
+import java.nio.file.Path;
 
-/**
- * @author Simonsator
- * @version 1.0.0 18.09.16
- */
 public class IAMain extends PAFExtension {
 	private static IAMain instance;
 	private IAConfigLoader config;
+
+	public IAMain(Path folder) {
+		super(folder);
+	}
 
 	static IAMain getInstance() {
 		return instance;
@@ -48,6 +49,11 @@ public class IAMain extends PAFExtension {
 							getConfig().getInt("DenyAll.Priority"),
 							getConfig().getString("Messages.DenyAll.Help")));
 		registerAsExtension();
+	}
+
+	@Override
+	public String getName() {
+		return "InteractAll";
 	}
 
 

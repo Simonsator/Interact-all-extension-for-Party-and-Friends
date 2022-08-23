@@ -1,15 +1,11 @@
-package de.simonsator.partyandfriends.interactall;
+package de.simonsator.partyandfriends.velocity.interactall;
 
-import de.simonsator.partyandfriends.api.PAFExtension;
-import de.simonsator.partyandfriends.utilities.ConfigurationCreator;
+import de.simonsator.partyandfriends.velocity.api.PAFExtension;
+import de.simonsator.partyandfriends.velocity.utilities.ConfigurationCreator;
 
 import java.io.File;
 import java.io.IOException;
 
-/**
- * @author Simonsator
- * @version 1.0.0 18.09.16
- */
 public class IAConfigLoader extends ConfigurationCreator {
 	protected IAConfigLoader(File file, PAFExtension pPlugin) throws IOException {
 		super(file, pPlugin);
