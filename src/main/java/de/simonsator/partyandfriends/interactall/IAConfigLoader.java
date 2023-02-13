@@ -12,7 +12,7 @@ import java.io.IOException;
  */
 public class IAConfigLoader extends ConfigurationCreator {
 	protected IAConfigLoader(File file, PAFExtension pPlugin) throws IOException {
-		super(file, pPlugin);
+		super(file, pPlugin, true);
 		readFile();
 		loadDefaultValues();
 		saveFile();

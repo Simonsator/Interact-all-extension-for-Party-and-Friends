@@ -6,7 +6,6 @@ import de.simonsator.partyandfriends.api.pafplayers.OnlinePAFPlayer;
 import de.simonsator.partyandfriends.api.pafplayers.PAFPlayer;
 import de.simonsator.partyandfriends.friends.commands.Friends;
 import de.simonsator.partyandfriends.friends.subcommands.Add;
-import net.md_5.bungee.api.chat.TextComponent;
 
 /**
  * @author Simonsator
@@ -32,7 +31,7 @@ public class AcceptAllSmallOutput extends InteractAllCommand {
 	public void onCommand(OnlinePAFPlayer pPlayer, String[] args) {
 		if (!hasFriendRequests(pPlayer))
 			return;
-		pPlayer.sendMessage(new TextComponent(PREFIX +
-				IAMain.getInstance().getConfig().getString("Messages.AcceptAll.AcceptedAll")));
+		pPlayer.sendMessage(PREFIX +
+				IAMain.getInstance().getConfig().getString("Messages.AcceptAll.AcceptedAll"));
 	}
 }
