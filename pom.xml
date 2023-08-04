@@ -6,7 +6,7 @@
 
 	<groupId>de.simonsator</groupId>
 	<artifactId>InteractAll</artifactId>
-	<version>1.0.5-RELEASE</version>
+	<version>1.0.6-RELEASE</version>
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
@@ -90,7 +90,7 @@
 		<dependency>
 			<groupId>de.simonsator</groupId>
 			<artifactId>InteractAll-Velocity</artifactId>
-			<version>1.0.5-RELEASE</version>
+			<version>1.0.6-RELEASE</version>
 		</dependency>
 	</dependencies>
 
