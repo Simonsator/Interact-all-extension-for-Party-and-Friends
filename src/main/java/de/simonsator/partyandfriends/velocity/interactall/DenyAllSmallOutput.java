@@ -18,7 +18,7 @@ public class DenyAllSmallOutput extends InteractAllCommand {
 	public void onCommand(OnlinePAFPlayer pPlayer, String[] args) {
 		if (!hasFriendRequests(pPlayer))
 			return;
-		pPlayer.sendMessage(Component.text(PREFIX +
-				IAMain.getInstance().getConfig().getString("Messages.DenyAll.DeniedAll")));
+		pPlayer.sendMessage(PREFIX +
+				IAMain.getInstance().getConfig().getString("Messages.DenyAll.DeniedAll"));
 	}
 }

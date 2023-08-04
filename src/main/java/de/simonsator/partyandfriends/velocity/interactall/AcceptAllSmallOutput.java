@@ -28,7 +28,7 @@ public class AcceptAllSmallOutput extends InteractAllCommand {
 	public void onCommand(OnlinePAFPlayer pPlayer, String[] args) {
 		if (!hasFriendRequests(pPlayer))
 			return;
-		pPlayer.sendMessage(Component.text(PREFIX +
-				IAMain.getInstance().getConfig().getString("Messages.AcceptAll.AcceptedAll")));
+		pPlayer.sendMessage(PREFIX +
+				IAMain.getInstance().getConfig().getString("Messages.AcceptAll.AcceptedAll"));
 	}
 }

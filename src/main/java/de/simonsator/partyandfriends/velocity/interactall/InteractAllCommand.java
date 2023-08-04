@@ -15,8 +15,8 @@ public abstract class InteractAllCommand extends FriendSubCommand {
 	protected boolean hasFriendRequests(OnlinePAFPlayer pPlayer) {
 		List<PAFPlayer> requests = pPlayer.getRequests();
 		if (requests.isEmpty()) {
-			pPlayer.sendMessage(Component.text(PREFIX +
-					IAMain.getInstance().getConfig().getString("Messages.NoFriendRequests")));
+			pPlayer.sendMessage(PREFIX +
+					IAMain.getInstance().getConfig().getString("Messages.NoFriendRequests"));
 			return false;
 		}
 		for (PAFPlayer player : requests)
@@ -28,7 +28,6 @@ public abstract class InteractAllCommand extends FriendSubCommand {
 
 	@Override
 	public void onCommand(OnlinePAFPlayer pPlayer, String[] args) {
-		if (!hasFriendRequests(pPlayer))
-			return;
+		hasFriendRequests(pPlayer);
 	}
 }
